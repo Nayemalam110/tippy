@@ -23,12 +23,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-       tools:text="Tippy"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textStyle="bold"
-
         app:layout_constraintEnd_toEndOf="@id/base"
-        app:layout_constraintTop_toBottomOf="@id/base" />
+
+        app:layout_constraintTop_toBottomOf="@id/base"
+        tools:text="Tippy" />
 
     <TextView
         android:id="@+id/tip"
@@ -52,25 +52,26 @@
         app:layout_constraintTop_toBottomOf="@id/tip" />
 
     <EditText
-        android:id="@+id/editTextNumberDecimal"
+        android:id="@+id/baseId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:ems="10"
         android:hint="Bill Amount"
         android:inputType="numberDecimal"
-        app:layout_constraintStart_toEndOf="@+id/base"
-        app:layout_constraintTop_toTopOf="@id/base"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="@id/base"
-     />
+        app:layout_constraintStart_toEndOf="@+id/base"
+        app:layout_constraintTop_toTopOf="@id/base" />
 
     <SeekBar
-        android:id="@+id/seekBar"
+        android:id="@+id/seekBarId"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:max="40"
+
         app:layout_constraintBottom_toBottomOf="@+id/tipp"
-        app:layout_constraintStart_toStartOf="@+id/editTextNumberDecimal"
+        app:layout_constraintStart_toStartOf="@+id/baseId"
         app:layout_constraintTop_toTopOf="@+id/tipp" />
 
     <TextView
@@ -79,7 +80,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintBottom_toBottomOf="@+id/tip"
-        app:layout_constraintStart_toStartOf="@+id/seekBar"
+        app:layout_constraintStart_toStartOf="@+id/seekBarId"
         app:layout_constraintTop_toTopOf="@+id/tip"
         tools:text="20" />
 
@@ -87,10 +88,10 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="120"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintBottom_toBottomOf="@+id/total"
         app:layout_constraintStart_toStartOf="@+id/textView4"
-        app:layout_constraintTop_toTopOf="@+id/total" />
+        app:layout_constraintTop_toTopOf="@+id/total"
+        tools:text="120" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
